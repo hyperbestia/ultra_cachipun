@@ -29,8 +29,18 @@ def jugar(usuario):
     else:
         print(f"PERDISTE. {pc.capitalize()} vence a {usuario.capitalize()}.")
 
-
-
+print(
+' _   _ _  _____ ____     _                      \n'+
+'| | | | ||_   _|  _ \   / \                     \n'+
+'| | | | |  | | | |_) | / _ \                    \n'+
+'| |_| | |__| | |  _ < / ___ \                   \n'+
+' \___/|____|_| |_| \_/_/   \_\                  \n'+
+'                                                \n'+
+'  ____    _    ____ _   _ ___ ____  _   _ _   _ \n'+
+' / ___|  / \  / ___| | | |_ _|  _ \| | | | \ | |\n'+
+'| |     / _ \| |   | |_| || || |_) | | | |  \| |\n'+
+'| |___ / ___ \ |___|  _  || ||  __/| |_| | |\  |\n'+
+' \____/_/   \_\____|_| |_|___|_|    \___/|_| \_|\n')
 
 while True:
     try:
@@ -45,4 +55,5 @@ while True:
             break
     except ValueError:
         print('Elige bien :v, coloca una opción de las que te coloqué')
+
 jugar(opcion_usuario)
