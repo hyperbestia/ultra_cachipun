@@ -3,7 +3,31 @@ from random import randint
 opciones = ["piedra", "papel", "tijera", "lagarto", "spock"]
 
 def jugar(usuario):
-    pass
+    
+    opciones = ["piedra", "papel", "tijera", "lagarto", "spock"]
+
+    reglas = {
+        "piedra": ["tijera", "lagarto"],
+        "papel": ["piedra", "spock"],
+        "tijera": ["papel", "lagarto"],
+        "lagarto": ["spock", "papel"],
+        "spock": ["tijera", "piedra"]
+    }
+    
+    indice_pc = randint(0, len(opciones) - 1)
+    pc = opciones[indice_pc]
+
+    print("-" * 30)
+    print(f"Tú elegiste: {usuario.capitalize()}")
+    print(f"La computadora eligió: {pc.capitalize()}")
+    print("-" * 30)
+
+    if usuario == pc:
+        print("¡Es un emp!")
+    elif pc in reglas[usuario]:
+        print(f"¡GANASTE! {usuario.capitalize()} vence a {pc.capitalize()}.")
+    else:
+        print(f"PERDISTE. {pc.capitalize()} vence a {usuario.capitalize()}.")
 
 
 
