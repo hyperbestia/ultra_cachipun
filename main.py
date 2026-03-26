@@ -23,7 +23,7 @@ def jugar(usuario):
     print("-" * 30)
 
     if usuario == pc:
-        print("¡Es un emp!")
+        print("¡Es un empate!")
     elif pc in reglas[usuario]:
         print(f"¡GANASTE! {usuario.capitalize()} vence a {pc.capitalize()}.")
     else:
